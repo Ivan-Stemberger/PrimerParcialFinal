@@ -47,12 +47,9 @@ int alta_Recaudacion(Recaudacion* list[], Contribuyente* listContribuyente[], in
                 fflush(stdout);
                 scanf("%s",aux);
 
-                printf("%d",atoi(aux));
-                printf("%d",encontrar_Contribuyente(listContribuyente,lenContribuyente,atoi(aux)));
-
-                if(esNumerico(aux) && encontrar_Contribuyente(listContribuyente,lenContribuyente,atoi(aux))!= 0)
+                if(esNumerico(aux))
                 {
-                	printf("Entró");
+
                 	id = atoi(aux);
                 	flag = 1;
 
