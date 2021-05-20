@@ -46,8 +46,13 @@ int alta_Recaudacion(Recaudacion* list[], Contribuyente* listContribuyente[], in
                 printf("Por favor introduzca el ID del contribuyente.\n");
                 fflush(stdout);
                 scanf("%s",aux);
-                if(esNumerico(aux) && encontrar_Contribuyente(listContribuyente,lenContribuyente,atoi(aux)))
+
+                printf("%d",atoi(aux));
+                printf("%d",encontrar_Contribuyente(listContribuyente,lenContribuyente,atoi(aux)));
+
+                if(esNumerico(aux) && encontrar_Contribuyente(listContribuyente,lenContribuyente,atoi(aux))!= 0)
                 {
+                	printf("Entró");
                 	id = atoi(aux);
                 	flag = 1;
 
@@ -121,6 +126,7 @@ int agregarRecaudacion(Recaudacion* list[], int len, int id, int mes, int tipo, 
                 setTipo(list[i],tipo);
                 setImporte(list[i],importe);
                 error = 1;
+                break;
             }
         }
     }

@@ -93,8 +93,10 @@ int agregarContribuyente(Contribuyente* list[], int len, char nombre[],char apel
                 setApellido(list[i],apellido);
                 setCuil(list[i],cuil);
                 error = 1;
+                break;
             }
         }
+
     }
     return error;
 }
